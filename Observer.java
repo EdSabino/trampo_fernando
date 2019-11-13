@@ -1,4 +1,4 @@
-class Observer {
+class Observer<T> {
 
-    public void execute();
+    public void execute(T value);
 }
