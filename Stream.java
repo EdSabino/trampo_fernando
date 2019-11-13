@@ -5,10 +5,10 @@ abstract class Stream<T> {
 
     public void add(T value) {
         this.value = value;
-        object.execute();
+        object.execute(value);
     }
 
-    public void listen(Observer object) {
+    public void listen(Observer<T> object) {
         this.object = object;
     }
 }
