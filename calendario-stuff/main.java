@@ -1,8 +1,11 @@
 import java.util.Scanner;
+import java.util.ArrayList;
 
 class Main {    
+    static ArrayList<Event> eventList;
     public static void main (String args[]) {
-        this.sc 
+        eventList = new ArrayList<Event>();
+        menuAddEvent();
     }
 
     public static void menuAddEvent () {
@@ -17,7 +20,10 @@ class Main {
         event.day = sc.nextInt();
         System.out.println("Hora:");
         event.hour = sc.nextInt();
+        System.out.println("AM ou PM");
+        event.setIsAm(sc.nextLine());
         System.out.println("Minuto:");
-        event.minuto = sc.nextInt();
+        event.minute = sc.nextInt();
+        eventList.add(event);
     } 
 }
